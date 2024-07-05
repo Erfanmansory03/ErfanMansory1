@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registeration</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- Custom Theme files -->
+	{% load static %}
+	<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+	<!-- //Custom Theme files -->
+
+</head>
+<body>
+<!-- main -->
+<div class="karbarwp wrapper">
+	<h1><center>User Login</center></h1>
+	<div class="main-agileinfo">
+		<div class="agileits-top">
+			<form action="/signin/" method="POST">
+				{% csrf_token %}
+				<input class="text" type="text" name="username" placeholder="username" required="">
+				<input class="text" type="password" name="password" placeholder="password" required="">
+				<div class="wthree-text">
+
+					<div class="clear"> </div>
+				</div>
+				<input type="submit" value="enter">
+			</form>
+			<p> <center> Do not have an acount? </center><a href="/signup">  <center>sign up </center></a></p>
+		</div>
+	</div>
+	<ul class="colorlib-bubbles">
+	</ul>
+</div>
+</body>
+</html>

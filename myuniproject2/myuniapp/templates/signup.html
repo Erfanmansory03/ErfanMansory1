@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign up</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- Custom Theme files -->
+	{% load static %}
+	<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="{% static 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cardo:ital,wght@0,400;0,700;1,400&display=swap' %}" rel="stylesheet">
+
+	<link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+	<link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+	<link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+	<link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+	<link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+	<!-- //Custom Theme files -->
+
+</head>
+<body>
+<!-- main -->
+<div class="karbarwp wrapper">
+	<h1>please fill the form</h1>
+	<div class="main-agileinfo">
+		<div class="agileits-top">
+			<form action="/signup/" method="POST">
+				{% csrf_token %}
+
+				<input class="text" type="text" name="name" placeholder="name" required="">
+				<input class="text" type="text" name="username" placeholder="Phone Number" required="">
+				<input class="text" type="password" name="password" placeholder="password" required="">
+				<input class="text d-flex justify-content-center" type="password" name="password2" placeholder="password2" required="">
+
+
+
+				<div class="wthree-text">
+					<div class="clear"></div>
+				</div>
+				<input type="submit" value="submit">
+			</form>
+			<p>Already have an account? <a href="/signin"> enter</a></p>
+		</div>
+	</div>
+	<ul class="colorlib-bubbles">
+
+	</ul>
+</div>
+</body>
+</html>

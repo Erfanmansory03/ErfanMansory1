@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<link href="{% static 'css/main.css' %}" rel="stylesheet" type="text/css" media="all" />
+<body>
+<h3> Select your photography type</h3>
+<form>
+    <label for="photography type">photography type:</label>
+    <select name="photography type" id="photography type">
+        <option value="Photo">Photo</option>
+        <option value="Package">Package</option>
+        <option value="Film">Film</option>
+    </select>
+</form>
+</body>
+
+<center>
+    <h1>Hello {{name}}</h1>
+
+    {{month}} <br/>
+    {{ year }} <br/>
+
+    {{ month_number }}<br/>
+
+    as of {{ time }}
+    <br/><br/>
+
+    {{ cal|safe }}
+    <br/><br/>
+    {{ current_year }}
+
+</center>
+<form>
+    <label for="select week">week:</label>
+    <select name="week" id="week">
+        <option value="first">first</option>
+        <option value="second">second</option>
+        <option value="third">third</option>
+        <option value="last week">last week</option>
+
+    </select>
+</form>
+
+<br/><br/>
+<form>
+    <label for="select date">day:</label>
+    <select name="day" id="day">
+        <option value="sat">sat</option>
+        <option value="sun">sun</option>
+        <option value="mon">mon</option>
+        <option value="tue">tue</option>
+        <option value="wed">wed</option>
+        <option value="thu">thu</option>
+        <option value="fri">fri</option>
+    </select>
+</form>
+</html>
